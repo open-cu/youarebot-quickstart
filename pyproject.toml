@@ -1,0 +1,25 @@
+[project]
+name = "echobot"
+version = "0.0.1"
+description = "Simple echo bot for HumanOrBot project."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi[standard] (>=0.115.11,<0.116.0)",
+    "pydantic (>=2.10.6,<3.0.0)",
+    "streamlit (==1.43.1)",
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry]
+package-mode = false
+
+[tool.poetry.group.test.dependencies]
+requests = "^2.32.3"
+uuid = "^1.30"
+
