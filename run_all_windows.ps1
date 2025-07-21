@@ -16,7 +16,8 @@ if (Test-Path $port_file) {
     $random_port = Get-Random -Minimum 1024 -Maximum 65536
     Set-Content -Path $port_file -Value $random_port
 }
-Write-Host "Random port generated: $random_port"
+Write-Host "http://${remote_host}:$random_port"
+
 
 # 2. Install Poetry
 Write-Host "Trying to install Poetry..."
@@ -75,4 +76,5 @@ Start-Process -FilePath "poetry" -ArgumentList "run", "streamlit", "run", "app/w
 
 # 10. Log address for registration
 Write-Host "Your address for registration is:"
-Write-Host "http://$remote_host:$random_port"
+Write-Host "http://${remote_host}:$random_port"
+
