@@ -26,11 +26,3 @@ powershell.exe -ExecutionPolicy Bypass -File .\run_all_windows.ps1
 2. Install project dependencies
 3. Set up an SSH tunnel to the remote host
 4. Start the FastAPI application on port 6782
-
-## Development
-
-To run tests:
-
-```bash
-poetry run python -m unittest discover -v tests
-```
