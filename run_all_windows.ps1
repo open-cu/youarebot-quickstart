@@ -75,4 +75,4 @@ Start-Process -FilePath "poetry" -ArgumentList "run", "streamlit", "run", "app/w
 
 # 10. Log address for registration
 Write-Host "Your address for registration is:"
-Write-Host "http://$remote_host:$random_port"
+Write-Host "http://${remote_host}:${random_port}"
