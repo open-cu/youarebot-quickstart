@@ -42,7 +42,7 @@ $icaclsOutput = icacls $private_key /inheritance:r /grant:r "$($env:USERNAME):F"
 Write-Host "icacls output:" $icaclsOutput
 
 # 6. Start SSH tunnel (reverse port forwarding)
-$sshArgs = "-i `"$private_key`" -N -R 0.0.0.0:${random_port}:localhost:6872 forwarduser@$remote_host -o StrictHostKeyChecking=no"
+$sshArgs = "-i `"$private_key`" -N -R 0.0.0.0:${random_port}:localhost:6872 forwarduser@${remote_host} -o StrictHostKeyChecking=no"
 Write-Host "Starting SSH tunnel with: ssh $sshArgs"
 Start-Process ssh -ArgumentList $sshArgs -NoNewWindow
 
