@@ -8,10 +8,15 @@ This service provides a FastAPI-based API endpoint that receives messages and ec
 
 ## Running the Service
 
+Go to the project directory:
+
 ### On Linux/macOS
 
 ```bash
 chmod +x run_all_linux.sh
+```
+
+```bash
 ./run_all_linux.sh
 ```
 
