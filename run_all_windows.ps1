@@ -51,7 +51,7 @@ Start-Sleep -Seconds 2
 
 # 7. Launch FastAPI uvicorn
 Write-Host "Launching the FastAPI app on port 6872..."
-Start-Process -FilePath "poetry" -ArgumentList "run", "fastapi", "dev", "app/api/main.py", "--host", "0.0.0.0", "--port", "6872"
+Start-Process -FilePath "poetry" -ArgumentList "run", "fastapi", "dev", "app/api/main.py", "--host", "::", "--port", "6872"
 
 # Time for FastAPI to start
 Start-Sleep -Seconds 5
