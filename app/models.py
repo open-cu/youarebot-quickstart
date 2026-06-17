@@ -40,10 +40,13 @@ class GetMessageResponseModel(CustomBaseModel):
     dialog_id: UUID4
 
 
-class IncomingMessage(BaseModel):
+class IncomingMessage(CustomBaseModel):
     """
     Input schema for a single message that needs to be saved
     and used for dialog classification.
+
+    Extends CustomBaseModel so model_dump() stringifies the UUID fields and the
+    payload can be sent straight to /predict with requests' json=.
     """
     text: StrictStr
     dialog_id: UUID4
